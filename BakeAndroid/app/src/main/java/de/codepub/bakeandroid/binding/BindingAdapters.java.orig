@@ -6,10 +6,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
-<<<<<<< HEAD
-//todo read more: https://developer.android.com/topic/libraries/data-binding/index.html
-=======
->>>>>>> 2a9d82668e4079b353885d8368e9a5fcd39ef961
 
 public class BindingAdapters {
 

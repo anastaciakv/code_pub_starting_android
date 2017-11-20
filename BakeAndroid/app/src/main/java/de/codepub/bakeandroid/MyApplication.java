@@ -13,8 +13,6 @@ import de.codepub.bakeandroid.di.AppInjector;
 import timber.log.Timber;
 
 public class MyApplication extends Application implements HasActivityInjector {
-    //todo DI: https://google.github.io/dagger/
-    //https://guides.codepath.com/android/dependency-injection-with-dagger-2
     @Inject
     DispatchingAndroidInjector<Activity> dispatchingAndroidInjector;
 

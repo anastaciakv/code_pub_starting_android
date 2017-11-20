@@ -7,8 +7,6 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
-//todo read more: https://developer.android.com/topic/libraries/data-binding/index.html
-
 public class BindingAdapters {
 
     @BindingAdapter("visibleGone")
