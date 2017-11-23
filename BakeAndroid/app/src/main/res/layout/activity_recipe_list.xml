@@ -28,5 +28,12 @@
             app:layoutManager="LinearLayoutManager"
             tools:listitem="@layout/recipe_item" />
 
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:visibleGone="@{viewModel.isLoading}" />
+
     </FrameLayout>
 </layout>

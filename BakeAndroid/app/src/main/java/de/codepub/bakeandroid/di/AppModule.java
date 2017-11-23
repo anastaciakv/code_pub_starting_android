@@ -10,6 +10,7 @@ import dagger.Module;
 import dagger.Provides;
 import de.codepub.bakeandroid.BuildConfig;
 import de.codepub.bakeandroid.data.ApiClient;
+import de.codepub.bakeandroid.ui.recipelist.RecipeListViewModel;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -18,6 +19,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module()
 public class AppModule {
     //todo declare all object instances here
+
+    @Singleton
+    @Provides
+    RecipeListViewModel providesRecipeListViewModel() {
+        return new RecipeListViewModel();
+    }
 
     @Singleton
     @Provides
