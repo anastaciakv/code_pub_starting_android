@@ -10,6 +10,8 @@ import dagger.Module;
 import dagger.Provides;
 import de.codepub.bakeandroid.BuildConfig;
 import de.codepub.bakeandroid.data.ApiClient;
+import de.codepub.bakeandroid.data.RecipeTask;
+import de.codepub.bakeandroid.data.RecipeTaskRetrofit;
 import de.codepub.bakeandroid.ui.recipelist.RecipeListViewModel;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -22,8 +24,14 @@ public class AppModule {
 
     @Singleton
     @Provides
-    RecipeListViewModel providesRecipeListViewModel() {
-        return new RecipeListViewModel();
+    RecipeTask providesRecipeTask(ApiClient client) {
+        return new RecipeTaskRetrofit(client);
+    }
+
+    @Singleton
+    @Provides
+    RecipeListViewModel providesRecipeListViewModel(RecipeTask task) {
+        return new RecipeListViewModel(task);
     }
 
     @Singleton
