@@ -25,7 +25,8 @@ public class RecipeListViewModel {
         if (callback == null) {
             callback = new RecipeTask.Callback() {
                 @Override
-                public void onRecipesFetched(List<Recipe> recipeList) {
+                public void onRecipesFetched(List<Recipe> recipes) {
+                    recipeList.set(recipes);
                     isLoading.set(false);
                 }
 
