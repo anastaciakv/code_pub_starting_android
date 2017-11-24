@@ -21,5 +21,10 @@ public class RecipeListActivity extends AppCompatActivity implements Injectable 
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_recipe_list);
         binding.setViewModel(viewModel);
+        //todo 1 create recipe adapter and setup list
+        //todo 3 add on property changed listener
+
     }
+
+    //todo 2 create method for updating recipe list
 }
