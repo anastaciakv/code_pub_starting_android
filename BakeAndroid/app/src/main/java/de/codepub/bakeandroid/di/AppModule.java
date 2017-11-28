@@ -12,6 +12,7 @@ import de.codepub.bakeandroid.BuildConfig;
 import de.codepub.bakeandroid.data.ApiClient;
 import de.codepub.bakeandroid.data.RecipeTask;
 import de.codepub.bakeandroid.data.RecipeTaskRetrofit;
+import de.codepub.bakeandroid.ui.recipedetail.RecipeDetailActivity;
 import de.codepub.bakeandroid.ui.recipelist.RecipeListViewModel;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -32,6 +33,12 @@ public class AppModule {
     @Provides
     RecipeListViewModel providesRecipeListViewModel(RecipeTask task) {
         return new RecipeListViewModel(task);
+    }
+
+    @Singleton
+    @Provides
+    RecipeDetailActivity providesRecipeDetailActivity() {
+        return new RecipeDetailActivity();
     }
 
     @Singleton

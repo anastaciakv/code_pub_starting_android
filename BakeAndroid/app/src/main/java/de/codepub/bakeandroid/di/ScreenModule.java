@@ -2,6 +2,7 @@ package de.codepub.bakeandroid.di;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
+import de.codepub.bakeandroid.ui.recipedetail.RecipeDetailActivity;
 import de.codepub.bakeandroid.ui.recipelist.RecipeListActivity;
 
 
@@ -12,4 +13,6 @@ public abstract class ScreenModule {
     @ContributesAndroidInjector
     abstract RecipeListActivity contributeRecipeListActivity();
 
+    @ContributesAndroidInjector
+    abstract RecipeDetailActivity contributeRecipeDetailActivity();
 }

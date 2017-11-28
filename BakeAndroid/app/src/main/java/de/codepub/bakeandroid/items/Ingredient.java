@@ -1,6 +1,8 @@
 package de.codepub.bakeandroid.items;
 
-public class Ingredient {
+import java.io.Serializable;
+
+public class Ingredient implements Serializable {
     public double quantity;
     public String measure;
     public String ingredient;

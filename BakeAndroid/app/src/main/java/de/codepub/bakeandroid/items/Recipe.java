@@ -1,9 +1,10 @@
 package de.codepub.bakeandroid.items;
 
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Recipe {
+public class Recipe implements Serializable {
     public int id;
     public String name;
     public List<Ingredient> ingredients;

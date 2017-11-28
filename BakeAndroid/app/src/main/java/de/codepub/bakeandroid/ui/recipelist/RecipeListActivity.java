@@ -11,6 +11,7 @@ import de.codepub.bakeandroid.R;
 import de.codepub.bakeandroid.databinding.ActivityRecipeListBinding;
 import de.codepub.bakeandroid.di.Injectable;
 import de.codepub.bakeandroid.items.Recipe;
+import de.codepub.bakeandroid.ui.recipedetail.RecipeDetailActivity;
 
 public class RecipeListActivity extends AppCompatActivity implements Injectable, RecipeAdapter.RecipeClickCallback {
     @Inject
@@ -52,6 +53,7 @@ public class RecipeListActivity extends AppCompatActivity implements Injectable,
 
     @Override
     public void onClick(Recipe recipe) {
-        //todo implement clicking on a recipe in the list
+        //done implement clicking on a recipe in the list
+        RecipeDetailActivity.start(this, recipe);
     }
 }
